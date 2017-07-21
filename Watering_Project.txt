@@ -1,0 +1,40 @@
+My Idea
+
+The idea of this is from the link https://create.arduino.cc/projecthub/maximilian-dullo/real-time-clock-controlled-herbal-garden-watering-system-d19e45
+
+This is tweaked to use a 12v solar panel and a battery to use renewalble energy.
+
+Thanks to Maximilian Dullo whose original Idea I had tweaked
+
+Introduction
+
+This project makes use of renewable energy using 12v solar panel and batter charger circui. This project uses a real time clock (RTC).
+
+The Balcony Garden
+
+My balcony garden consists of flowering plants and herbal plants as well. The intention of this project is to water my plants when I'm away for a vacation every day at 6:00 AM & 6:00 PM. This can also be used to water the palnts daily on these timings.
+
+
+Water Supply
+
+The water supply is enabled through a 20 liter tank, enough to keep the watering running for a few weeks (picture 4). As visible in picture 5, there are two yellow cables leaving the water tank on the bottom. Those are connected to a float switch, that triggers an alarm if the water level goes below 4 cm, a critical level for the pump. The circuit schematics at the bottom do not show the float switch as a proper symbol. The reason is because there was no such device available on fritzing. The pump is connected to the relay, 12V power and a 12mm PVC tube. 
+
+Watering System
+
+The watering system is made with aquarium equipment that can be purchased online or in a local aquarium shop. NOTE the individual watering parts (tubes, angels, and valves) are not included in the component list above because this really depends on the quantity of herbs involved. Nevertheless, a brief explanation is given in the following paragraphs.
+
+The watering system starts with a 12mm tube that leaves the pump. Picture 6 shows an adapter connecting the 12mm pump tube to a 4/6 mm aquarium air tube. 
+
+The Code
+
+The code for the relay/RTC is from the Robot Geek Team on the Arduino Project Hub and the code for the buzzer is from a codebender tutorial from the Instructables platform. Both are combined in a single sketch. The RTC triggers the relay during a specific hour each day: 6 in the morning and at 8 in the evening. The relay is then powered for 20 seconds followed by a long delay. This is necessary because the real time clock is triggering action during the entire hour, in other words from 8:00 to 8:59. Thus after 20 seconds of watering a 3600 seconds delay keeps the relay powered off during the entire hour.
+
+I am well aware that there might be much more elegant solutions to the given problem. However, as I am still at the beginning of programming, I was satisfied with that solution because it does what it is supposed to.
+
+The alarm is set on a 2000 HZ level. This is loud enough to be heard inside the house. Meanwhile it avoids disturbing any neighbors.
+
+Schematics
+
+This project uses an Arduino Nano shield or terminal adapter (see hardware list) coming with screws for every pin to ensure proper connection. For all other connections this project uses socket terminals. There are probably more professional solutions, but this one makes sure each connection keeps stable even in case someone accidentally bumps against the weatherproof box. This is the reason why the schematics do not show any breadboard.
+
+
